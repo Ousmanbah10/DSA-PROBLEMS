@@ -28,6 +28,7 @@ for length in range(2, n+1):
             summ - dp[i][j-1]
         )
 
+
 print(dp[0][n-1])
 
         
