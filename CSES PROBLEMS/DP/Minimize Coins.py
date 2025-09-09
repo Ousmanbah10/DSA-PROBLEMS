@@ -14,3 +14,4 @@ if dp[-1] == INF:
     print(-1)
 else:
     print(dp[-1])
+    print(dp[-1])
