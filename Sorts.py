@@ -39,3 +39,23 @@ def merge(left,right):
     return output
 
 
+def quick_sort(nums):
+    if len(nums) <= 1:
+        return nums
+    
+    m = len(nums) // 2  
+    left = []
+    right = []
+    
+    for i in range(len(nums)):
+        if i == m:
+            continue
+        if nums[i] <= nums[m]:
+            left.append(nums[i])
+        
+        if nums[i] > nums[m]:
+            right.append(nums[i])
+        
+    return quick_sort(left) + [nums[m]] + quick_sort(right)
+        
+     
