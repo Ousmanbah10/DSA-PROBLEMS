@@ -35,4 +35,4 @@ class Solution:
                     current.pop()
 
         place([],0)
-        return output
+        return outputM
