@@ -5,31 +5,27 @@ n = int(input())
 vals = []
 for i in range(n):
     vals.append(int(input()))
-
-def find_sums(value):
     
-    summ = 0
-    if value <= 9:
-        
-        # print(value)
-        print(sum(range(value + 1)))
-        return
-    
-    dp = [0] * (value + 1)
-    for i in range(10):
-        dp[i] = i
-        summ += i
-        
-    for i in range(10,value+1):
-        
-        for ch in str(i):
-            digit = int(ch)
-            dp[i] += dp[digit]
-        summ += dp[i]   
-    print(summ)
-    return
+max_val = max(vals)
 
+dp = [0] * (max_val + 1)
+prefix = [0] * (max_val + 1)
+
+for i in range(10):
+    dp[i] = i
+    if i > 0:
+        prefix[i] = prefix[i - 1] + i
+    else:
+        prefix[i] = 0
+    
+for i in range(10,max_val+1):
+    
+    for ch in str(i):
+        digit = int(ch)
+        dp[i] += dp[digit]
+  
+    prefix[i] = prefix[i - 1] + dp[i]
+    
 for element in vals:
-    find_sums(element)
+    print(prefix[element])
         
-
