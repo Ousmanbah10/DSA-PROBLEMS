@@ -36,14 +36,15 @@ for element in vals:
 
 # Recussion: 
 
-def sum_digits(num):
-   
-    total = 0
-    while num > 0:
-        total += num % 10   
-        num //= 10        
-    return total
 
+def sum_digits(num):
+  
+    num_str = str(num)
+    total = 0
+    for digit in num_str:
+      
+        total += int(digit)
+    return total
 
 
 def sum_all_digits(n):
@@ -66,5 +67,9 @@ def sum_all_digits(n):
     return total
 
 
-n = int(input("Enter n: "))
+n = int(input())
+
+vals = []
+for i in range(n):
+    vals.append(int(input()))
 print(sum_all_digits(n))
