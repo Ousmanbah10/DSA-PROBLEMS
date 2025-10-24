@@ -1,4 +1,5 @@
 
+
 #2D APPROACH
 import sys
 
