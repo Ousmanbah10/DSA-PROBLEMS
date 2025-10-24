@@ -31,3 +31,25 @@ find_ones(0, n - 1)
 
 # --- Output ---
 print(" ".join(map(str, result)))
+
+
+
+# SECOND
+def query(l, r):
+    """Return True if subarray arr[l:r+1] contains any 1."""
+    return any(arr[l:r + 1])
+
+
+# --- Input handling ---
+n = int(input().strip())
+arr = list(map(int, input().strip().split()))
+
+result = []
+
+# --- Linear search for 1s ---
+for i in range(n):
+    if query(i, i):   # check single element
+        result.append(i)
+
+# --- Output ---
+print(" ".join(map(str, result)))
