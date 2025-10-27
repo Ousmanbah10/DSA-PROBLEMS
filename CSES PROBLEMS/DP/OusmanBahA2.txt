@@ -1,0 +1,17 @@
+// Ousman Bah
+// PID: 6378860
+// Program1: Add two integers
+public class AddTwoNumbers {
+    public static void main(String[] args) {
+        int num1 = 5;   
+        int num2 = 10; 
+        int sum = num1 + num2;
+        System.out.println("Sum: " + sum);
+    }
+}
+
+
+
+//Program 2
+{"code":"# Add two integers from memory 5000 and 5004, store in $t0 and memory 5008\n\n    
+lw $t1, 5000($zero) \n    lw $t2, 5004($zero) \n    add $t0, $t1, $t2 \n    sw $t0, 5008($zero)\n","registers":"$zero 0, $t0 0, $t1 0, $t2 0, $t3 0, $t4 0, $t5 0, $t6 0, $sp 8188, $ra 0","memory":"5000 5, 5004 10, 5008 0, 8180 0, 8184 0, 8188 0"}
